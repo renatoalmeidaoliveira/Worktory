@@ -1,0 +1,36 @@
+devices:
+  'sandbox-nxos':
+    'hostname': 'sandbox-nxos-1.cisco.com'
+    'platform': 'cisco_nxos'
+    'username': 'admin'
+    'password': 'Admin_1234!'
+    'groups': 
+      - 'CORE'
+    'connection_manager': 'netmiko'
+    'select_parsers' : 'genie'
+    'mode': 'sync'
+    'transport': 'ssh'
+
+  'sandbox-nxos-1':
+    'hostname': 'sandbox-nxos-1.cisco.com'
+    'platform': 'cisco_nxos'
+    'username': 'admin'
+    'password': 'Admin_1234!'
+    'groups': 
+      - 'CORE'
+    'select_parsers' : 'ntc'
+    'connection_manager': 'scrapli'
+    'mode': 'sync'
+
+  'sandbox-nxos-2':
+    'hostname': 'sandbox-nxos-1.cisco.com'
+    'platform': 'nxos'
+    'username': 'admin'
+    'password': 'Admin_1234!'
+    'groups': 
+      - 'EDGE'
+    'connection_manager': 'unicon'
+    'mode': 'sync'
+    'transport': 'ssh'
+    'GRACEFUL_DISCONNECT_WAIT_SEC': 0
+    'POST_DISCONNECT_WAIT_SEC': 0
