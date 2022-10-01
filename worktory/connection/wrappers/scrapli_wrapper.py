@@ -26,6 +26,7 @@ class scrapli_wrapper(base_wrapper):
             device_data['auth_secondary'] = device.enable_password
         
         scrapli_args = [
+            'port',
             'auth_private_key',
             'auth_private_key_passphrase',
             'auth_strict_key',
